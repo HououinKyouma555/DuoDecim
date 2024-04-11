@@ -29,6 +29,10 @@ public class FemaleNPC2 extends Entity{
     public void setDialogue()
     {
         dialogues[0] = "The lions kinda cute";
+        if (gp.player.reputation == 1)
+        {
+            dialogues[0] = "I'm scared of the lion";
+        }
     }
 
     public void speak()

@@ -29,6 +29,8 @@ public class NPC_OldMan extends Entity{
         attackResponse[1] = "why would you do that";
         attackResponse[2] = "thank you";
         attackResponse[3] = "Please leave";
+        attackResponse[4] = "I'm too old for this";
+        attackResponse[5] = "I AM THE DESCENDED GOD OF THIS WORLD, KNEEL";
 
         getImage();
         setDialogue();

@@ -27,6 +27,7 @@ public class MaleNPC extends Entity{
     public void setDialogue()
     {
         dialogues[0] = "I saw the lion maul some kid.\nPretty sure it ran down to the\n caves";
+        dialogues[1] = "The kid deserved it. He was\nalways a little punk.";
     }
 
     public void speak()
