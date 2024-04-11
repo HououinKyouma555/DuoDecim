@@ -14,7 +14,7 @@ public class BlueBoy extends Entity{
         appears = 1;
 
         //ATTACK OPTIONS
-        attackOption[0] = "Punch that bii";
+        attackOption[0] = "Punch that fool";
         attackOption[1] = "Throw Rock";
         attackOption[2] = "Mean insult";
         attackOption[3] = "Quit";
