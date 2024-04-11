@@ -41,10 +41,6 @@ public class Chicken extends Entity{
         }
         else if (gp.player.reputation == 2)
         {
-            dialogues[0] = "you kinda cute.";
-        }
-        else if (gp.player.reputation == 3)
-        {
             dialogues[0] = "be my everything...";
         }
     }

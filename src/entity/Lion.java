@@ -29,7 +29,6 @@ public class Lion extends Entity {
         attackResponse[1] = "grrr";
         attackResponse[2] = ":(";
         attackResponse[3] = "bruh";
-        attackResponse[4] = "WEAKLING!";
 
         getImage();
     }
