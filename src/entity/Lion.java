@@ -81,7 +81,7 @@ public class Lion extends Entity {
         
         String attackName = "bite";
         if (gp.ui.enemyHasAttacked == false){
-            gp.player.health -= 200;
+            gp.player.health -= 50;
         }
 
         if (gp.player.health < 200){
