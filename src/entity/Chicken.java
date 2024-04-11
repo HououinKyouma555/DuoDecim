@@ -37,7 +37,7 @@ public class Chicken extends Entity{
         }
         else if (gp.player.reputation == 1)
         {
-            dialogues[0] = "fuck you bitch.";
+            dialogues[0] = "frick you bro.";
         }
         else if (gp.player.reputation == 2)
         {
