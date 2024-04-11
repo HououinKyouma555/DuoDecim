@@ -26,7 +26,7 @@ public class MaleNPC2 extends Entity{
 
     public void setDialogue()
     {
-        dialogues[0] = "back up kid, im a registered\nsex offender";
+        dialogues[0] = "what's up brother!";
     }
 
     public void speak()
