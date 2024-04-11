@@ -28,7 +28,7 @@ public class FemaleNPC extends Entity{
 
     public void setDialogue()
     {
-        dialogues[0] = "Ever since that lion appeared,\nI havent been able to leave\nthe village.";
+        dialogues[0] = "Ever since that lion appeared,\nI haven't been able to leave\nthe village.";
     }
 
     public void speak()
