@@ -71,17 +71,6 @@ public class Player extends Entity {
         right1 = setUp("hercules/HeraclesRightCrip");
         right2 = setUp("hercules/HeraclesRightStill");
 
-        // up1 = setUp("lion/LionDownLeft");
-        // up2 = setUp("lion/LionDownRight");
-        // down1 = setUp("lion/LionDownLeft");
-        // down2 = setUp("lion/LionDownRight");
-        // // down1 = setUp("hercules/HeraclesDownLeft");
-        // // down2 = setUp("hercules/HeraclesDownRight");
-        // left1 = setUp("lion/LionLeft1");
-        // left2 = setUp("lion/LionLeft2");
-        // right1 = setUp("lion/LionRight1");
-        // right2 = setUp("lion/LionRight2");
-
     }
 
     public BufferedImage setUp(String filePath){
@@ -98,14 +87,7 @@ public class Player extends Entity {
         
     }
 
-
     public void update(){
-        if (health <= 0)
-        {
-            gp.gameState = gp.overState;
-        }
-        else
-        {
             if (keyH.downPressed == true || keyH.upPressed == true 
             || keyH.rightPressed == true || keyH.leftPressed == true){
                 // When WASD is pressed, the direction of the player changes
@@ -188,9 +170,6 @@ public class Player extends Entity {
                     spriteCounter = 0;
                 }
             }
-        }
-        
-        
     }
 
     public void pickUpObject(int i){

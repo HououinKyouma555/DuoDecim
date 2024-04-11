@@ -65,6 +65,9 @@ public class UI {
         {
             drawGameOverScreen();
         }
+        if (gp.gameState == gp.winState){
+            drawVictoryScreen();
+        }
     }
 
     public void drawTitleScreen(){
@@ -253,6 +256,9 @@ public class UI {
             }
         }
         else if (gp.enemy[enemyTag].health <= 0){
+            if (enemyTag == 2){
+                gp.gameState = gp.winState;
+            }
             gp.stopMusic();
             text = "oh.. :(";
             x = gp.tileSize * 2;
@@ -300,6 +306,62 @@ public class UI {
         g2.setColor(Color.WHITE);
 
         y+= gp.tileSize * 4;
+    }
+
+    public void drawVictoryScreen(){
+        g2.setColor(new Color(70, 120, 80));
+        g2.fillRect(0, 0, gp.screenWidth, gp.screenHeight);
+
+        g2.setFont(g2.getFont().deriveFont(Font.BOLD, 40F));
+        String text = "CONGRATULATIONS";
+        int x = getXForCenteredText(text);
+        int y = gp.screenHeight/2 - gp.tileSize * 4;
+
+        g2.setColor(Color.BLACK);
+        g2.drawString(text, x-5, y+5);
+
+        g2.setColor(new Color(210, 70, 130));
+        g2.drawString(text, x, y);
+
+        text = "You have beaten the first labor";
+        x = getXForCenteredText(text);
+        y += gp.tileSize * 2;
+
+        g2.setColor(Color.BLACK);
+        g2.drawString(text, x, y);
+
+        x = gp.screenWidth /2 - gp.tileSize * 2;
+        y += gp.tileSize;
+        g2.drawImage(gp.player.down1, x, y, gp.tileSize * 3, gp.tileSize * 3, null);
+
+        g2.setFont(gp.getFont().deriveFont(Font.PLAIN, 40F));
+        g2.setColor(Color.WHITE);
+
+        y+= gp.tileSize * 3;
+
+        text = "PLAY AGAIN?";
+        x = getXForCenteredText(text);
+        y += gp.tileSize;
+        g2.drawString(text, x, y);
+        if (commandNum == 0){
+            g2.drawString(">", x-gp.tileSize, y);
+        }
+
+        text = "FOLLOW ON IG";
+        x = getXForCenteredText(text);
+        y += gp.tileSize;
+        g2.drawString(text, x, y);
+        if (commandNum == 1){
+            g2.drawString(">", x-gp.tileSize, y);
+        }
+
+        text = "DONATE";
+        x = getXForCenteredText(text);
+        y += gp.tileSize;
+        g2.drawString(text, x, y);
+        if (commandNum == 2){
+            g2.drawString(">", x-gp.tileSize, y);
+        }
     }
 
     public void enemyTalk(){

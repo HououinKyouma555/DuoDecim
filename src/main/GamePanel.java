@@ -58,6 +58,7 @@ public class GamePanel extends JPanel implements Runnable{
     public final int dialogueState = 3;
     public final int combatState = 4;
     public final int overState = 5;
+    public final int winState = 6;
 
     // MAP STATE
     public int mapState;
@@ -190,6 +191,22 @@ public class GamePanel extends JPanel implements Runnable{
 
         
         g2.dispose();
+    }
+
+    public void resetValues(){
+        player.health = player.maxHealth;
+        for (int i = 0; i < enemy.length; i++){
+            if (enemy[i] != null){
+                enemy[i].health = enemy[i].maxHealth;
+            }
+        }
+        aSetter.setObject();
+        aSetter.setNPC();
+        aSetter.setEnemy();
+        mapState = Nemea;
+        tileM.loadMap("/res/maps/nemea.txt");
+        player.worldX = tileSize*7;
+        player.worldY = tileSize*9;
     }
 
     public void playMusic(int i){

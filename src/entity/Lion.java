@@ -55,6 +55,7 @@ public class Lion extends Entity {
                 break;
             case (2):
                 System.out.println("Attack 2 was chosen");
+                health -= 200;
                 System.out.println("Health = "+health);
                 break;
         }
