@@ -1,18 +1,13 @@
-## Getting Started
-
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+The project title is XII Duodecim.
+It is a simple 2D RPG game about Hercules and his 12 labours.
+This project focuses on his first, the fight against the Nemean Lion.
+To run, simply run from the main file and it will display a screen.
+You start in the city of Nemea in a small village.
+You talk to the villagers by pressing enter to gain information.
+You then go down to the fields and fight the lion.
+To fight, use the "A" and "D" keys to scroll between attack opitions.
+Press "enter" key to select an attack.
+If the enemy health bar goes all the way down, you win the fight.
+After beating the lion, it runs away into the cave.
+You follow the lion into the cave to fight it again.
+After you beat it again, you win the game.

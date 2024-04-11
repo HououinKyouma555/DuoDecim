@@ -1,9 +1,19 @@
 package entity;
 
 import main.GamePanel;
+import main.Sword;
+
+import java.util.Random;
+
+import main.Bow;
+
+
+
+
+
 
 public class Lion extends Entity {
-
+    static Random random = new Random();
     public Lion(GamePanel gp){
         super(gp);
 
@@ -18,11 +28,11 @@ public class Lion extends Entity {
         attackOption[0] = "Sword";
         attackOption[1] = "Bow and Arrow";
         attackOption[2] = "Strangle";
-        attackOption[3] = "punch";
+        attackOption[3] = "Nothing";
 
         attackResponse[0] = "rawr";
         attackResponse[1] = "grrr";
-        attackResponse[2] = ";)";
+        attackResponse[2] = ":(";
         attackResponse[3] = "bruh";
 
         getImage();
@@ -44,19 +54,23 @@ public class Lion extends Entity {
     public void attackEnemy(int attackSelected){
         switch (attackSelected){
             case (0):
-                System.out.println("Attack 0 was chosen");
-                health -= 10;
-                System.out.println("Health = "+health);
+                health -= Sword.swordAttackValue;
+                System.out.println("The enemy took " + Sword.swordAttackValue +" damage!");
                 break;
             case (1):
-                System.out.println("Attack 1 was chosen");
-                health -= 20;
-                System.out.println("Health = "+health);
+            int randomNumber = random.nextInt(101);
+
+            if (randomNumber < 75) {
+                System.out.println("The shot landed!");
+                health -=Bow.bowAttackValue;
+                System.out.println("The enemy took " + Bow.bowAttackValue +" damage!");
+            } else {
+                System.out.println("The shot missed...");
+            }
                 break;
             case (2):
-                System.out.println("Attack 2 was chosen");
-                health -= 200;
-                System.out.println("Health = "+health);
+                //Instant kill Lion
+                health -=100000000;
                 break;
         }
     }
@@ -69,7 +83,7 @@ public class Lion extends Entity {
         
         String attackName = "bite";
         if (gp.ui.enemyHasAttacked == false){
-            gp.player.health -= 100;
+            gp.player.health -= 200;
         }
 
         return attackName;

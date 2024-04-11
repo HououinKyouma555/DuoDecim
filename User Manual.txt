@@ -1,0 +1,9 @@
+w - move up
+a - move left
+s - move down
+d - move right
+enter - interact
+p - pause
+shift - sprint
+To fight, use the "A" and "D" keys to scroll between attack opitions.
+Press "enter" key to select an attack.
