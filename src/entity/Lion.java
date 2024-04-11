@@ -22,7 +22,7 @@ public class Lion extends Entity {
         //ATTACK OPTIONS
         attackOption[0] = "Sword";
         attackOption[1] = "Bow and Arrow";
-        attackOption[2] = "Strangle";
+        attackOption[2] = "Nothing";
         attackOption[3] = "Nothing";
 
         attackResponse[0] = "rawr";
@@ -65,7 +65,10 @@ public class Lion extends Entity {
                 break;
             case (2):
                 //Instant kill Lion
-                health -=100000000;
+                if (gp.player.health < 200){
+                    health -=100000000;
+                }
+                
                 break;
         }
     }
@@ -79,6 +82,10 @@ public class Lion extends Entity {
         String attackName = "bite";
         if (gp.ui.enemyHasAttacked == false){
             gp.player.health -= 200;
+        }
+
+        if (gp.player.health < 200){
+            attackOption[2] = "Strangle";
         }
 
         return attackName;
