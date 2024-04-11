@@ -1,3 +1,4 @@
+package main;
 public class Bow {
     static Player player;
     //Scales damage with player reputation

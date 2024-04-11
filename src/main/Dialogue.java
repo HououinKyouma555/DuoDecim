@@ -1,3 +1,4 @@
+package main;
 public class Dialogue {
     //Calls on the player class so I can use any variables from that class
     static Player player;

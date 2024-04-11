@@ -7,11 +7,6 @@ import java.util.Random;
 
 import main.Bow;
 
-
-
-
-
-
 public class Lion extends Entity {
     static Random random = new Random();
     public Lion(GamePanel gp){
